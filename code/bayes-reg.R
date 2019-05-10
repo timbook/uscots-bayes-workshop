@@ -42,3 +42,19 @@ traceplot(model_fit, lwd = 0.1, ncol = 2) +
 dev.off()
 
 head(as.data.frame(model_fit))
+
+params <- as.data.frame(model_fit)
+
+# Question 1
+mean(params$b1 > 0.6)
+
+# Question 2
+daughter_sim <- params$b0 + 66*params$b1
+mean(daughter_sim > 66)
+
+# Question 3
+quantile(params$b1, c(0.025, 0.975))
+
+# Question 4
+daughter_sim <- params$b0 + 68*params$b1
+quantile(daughter_sim, c(0.025, 0.975))
