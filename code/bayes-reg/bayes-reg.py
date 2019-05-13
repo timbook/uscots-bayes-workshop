@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 import pystan
 
-heights = pd.read_csv('data/heights.csv')
+heights = pd.read_csv('../data/heights.csv')
 
 model_data = {
     'J' : heights.shape[0],
