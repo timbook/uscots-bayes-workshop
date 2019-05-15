@@ -36,7 +36,7 @@ summary(model_fit)$summary
 ols <- lm(Dheight ~ Mheight, data = heights)
 summary(ols)
 
-png("../output/trace.png", res = 96, height = 4, width = 12, units = "in")
+png("output/trace.png", res = 96, height = 4, width = 12, units = "in")
 traceplot(model_fit, lwd = 0.1, ncol = 2) + 
   theme(legend.position = "none")
 dev.off()
